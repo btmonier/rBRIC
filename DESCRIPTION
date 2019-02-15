@@ -1,12 +1,21 @@
 Package: rbric
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
-Authors@R: 
-    person(given = "First",
-           family = "Last",
-           role = c("aut", "cre"),
-           email = "first.last@example.com")
-Description: What the package does (one paragraph).
-License: What license it uses
+Title: Biclustering and cell type prediction in R
+Version: 0.0.1
+Authors@R: c(
+    person(
+        given = "Brandon",
+        family = "Monier",
+        role = c("aut", "cre"),
+        email = "brandon.monier@gmail.com"
+    ),
+    person(
+        given = "Qin",
+        family = "Ma",
+        role = c("aut", "fnd", "com")
+    ))
+Description: This package is an integration of the BRIC C++ code with R.
+License: GPL-3 | file LICENSE
 Encoding: UTF-8
 LazyData: true
+LinkingTo: Rcpp
+Imports: Rcpp
