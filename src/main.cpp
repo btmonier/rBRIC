@@ -71,25 +71,20 @@ int main(const int argc, char *argv[]) {
   } else {
     char stream_nm[LABEL_LEN + 20];
     strcpy(stream_nm, po->FN);
-	if (po->IS_new_discrete || po->IS_rpkm)
+    if (po->IS_new_discrete || po->IS_rpkm)
       strcat(stream_nm, ".original.chars");
-	else
+    else
       strcat(stream_nm, ".chars");
     /* formatted file */
     write_imported(stream_nm);
-    /* exit the program without biclustering analysis*/
-    if (po->IS_Fast)
-      exit(1);
     /* the file that stores all blocks */
-	if (po->IS_new_discrete || po->IS_rpkm)	{
-		strcpy(stream_nm, argv[0]);
-		strcat(stream_nm, " -i ");
-		strcat(stream_nm, po->FN);
-		strcat(stream_nm, ".chars -d");
-		system(stream_nm); // This ugly call should be fixed.
-		exit(1);
-	}
-	char dest[LABEL_LEN + 20];
+    if (po->IS_new_discrete || po->IS_rpkm)    {
+        strcpy(stream_nm, argv[0]);
+        strcat(stream_nm, " -i ");
+        strcat(stream_nm, po->FN);
+        strcat(stream_nm, ".chars -d");
+    }
+    char dest[LABEL_LEN + 20];
     strcpy(dest, po->FN);
     strcat(dest, ".blocks");
     make_graph(dest);

@@ -47,7 +47,6 @@ void err(const char *format, ...)
   fprintf(stderr, "\n");
   va_end(args);
 }
-
 void errAbort(const char *format, ...)
 /* Print error message and exit */
 {
@@ -57,7 +56,6 @@ void errAbort(const char *format, ...)
   vfprintf(stderr, format, args);
   fprintf(stderr, "\n");
   va_end(args);
-  exit(1);
 }
 
 long clock1000()
