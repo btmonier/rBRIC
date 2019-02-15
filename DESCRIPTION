@@ -1,4 +1,4 @@
-Package: rbric
+Package: rBRIC
 Title: Biclustering and cell type prediction in R
 Version: 0.0.1
 Authors@R: c(
