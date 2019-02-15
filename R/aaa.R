@@ -1,3 +1,3 @@
-#' @useDynLib rbric, .registration = TRUE
+#' @useDynLib rBRIC, .registration = TRUE
 #' @importFrom Rcpp sourceCpp
 NULL
